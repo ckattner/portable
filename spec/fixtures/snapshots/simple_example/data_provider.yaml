@@ -1,0 +1,34 @@
+data_sources:
+  - name: sheet1
+    header_rows:
+      - [ Run By, Jack Shepard ]
+      - [ Organization, Oceanic 6 ]
+    footer_rows:
+      - [ Completed At, '9/22/2004 04:15 PM' ]
+    data_rows:
+      - first: Bozo
+        last: Clown
+        dob: '2000-01-04'
+        funny: false
+        status: 0
+        ignore: me
+      - first: Frank
+        last: Rizzo
+        dob: '1902-03-17'
+        funny: true
+        status: 1
+      - first: Joey
+        last: Shmoey
+        dob: '1999-04-04'
+        funny: null
+        status: 2
+
+  - name: sheet2
+    keys:
+      - make
+      - model
+      - year
+    data_rows:
+      - make: Toyoda
+        model: Camry
+        year: 1934

@@ -1,0 +1,32 @@
+options:
+  byte_order_mark: utf_8
+sheets:
+  - name: sheet1
+    data_table:
+      auto: false
+      columns:
+        - header: first
+        - header: last
+        - header: dob
+          transformers:
+            - type: r/value/resolve
+              key: dob
+            - type: r/format/date
+              output_format: '%m/%d/%Y'
+        - header: funny
+        - header: status
+      include_headers: false
+    footer_rows:
+      - [ Brought to you by no one ]
+    header_rows:
+       - [ 'SIMPLE EXAMPLE' ]
+  - name: sheet2
+  - name: sheet3
+    data_source_name: sheet2
+    data_table:
+      columns:
+        - header: something_static
+          transformers:
+            - type: r/value/static
+              value: I am static!
+        - header: make # a duplicate of one that would be auto-added due to auto: true

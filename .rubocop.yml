@@ -20,7 +20,7 @@ Metrics/MethodLength:
   Max: 30
 
 Metrics/AbcSize:
-  Max: 16
+  Max: 20
 
 Metrics/ClassLength:
   Max: 125

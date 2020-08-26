@@ -7,6 +7,5 @@
 # LICENSE file in the root directory of this source tree.
 #
 
-module Portable
-  VERSION = '1.0.0-alpha.7'
-end
+require_relative 'util/pivotable'
+require_relative 'util/uniqueness'

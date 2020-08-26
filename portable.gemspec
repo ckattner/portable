@@ -5,14 +5,14 @@ require './lib/portable/version'
 Gem::Specification.new do |s|
   s.name        = 'portable'
   s.version     = Portable::VERSION
-  s.summary     = 'Under Construction'
+  s.summary     = 'Virtual Document Modeling and Rendering Engine'
 
   s.description = <<-DESCRIPTION
-    Under Construction
+    Portable is a virtual document object modeling library.  Out of the box is provides a CSV writer but others for other formats like Microsoft Excel could easily be implemented and used.
   DESCRIPTION
 
-  s.authors     = ['Matthew Ruggio', 'Dan Dewar']
-  s.email       = ['mruggio@bluemarblepayroll.com', 'ddewar@bluemarblepayroll.com']
+  s.authors     = ['Matthew Ruggio']
+  s.email       = ['mruggio@bluemarblepayroll.com']
   s.files       = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   s.bindir      = 'exe'
   s.executables = []
@@ -28,12 +28,11 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 2.5'
 
-  s.add_dependency('dbee', '~>2', '>=2.1.1')
+  s.add_dependency('acts_as_hashable', '~>1')
+  s.add_dependency('objectable', '~>1')
+  s.add_dependency('realize', '~>1.1')
 
-  s.add_development_dependency('activerecord', '<6')
-  s.add_development_dependency('dbee-active_record', '~>2', '>=2.1.1')
   s.add_development_dependency('guard-rspec', '~>4.7')
-  s.add_development_dependency('mysql2', '~>0.5')
   s.add_development_dependency('pry', '~>0')
   s.add_development_dependency('rake', '~> 13')
   s.add_development_dependency('rspec', '~> 3.8')
